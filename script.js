@@ -14,9 +14,9 @@ const popup = document.getElementById("gameOverPopup");
 const gameContainer = document.querySelector(".game_container");
 
 const gameBackgrounds = [
-  "images/Leo.png",
-  "images/Premium.png",
-  "images/Play_station.png"
+  "Images/Leo.png",
+  "Images/Premium.png",
+  "Images/Play_station.png"
 ];
 
 
