@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+  <div class="game_container">
+    <div class="game_section">
+      <div class="game_content">
+        <div class="popup" id="gameOverPopup">
+          <h1>Game Over</h1>
+        <div class="restart_game">
+           <button onclick="restartGame()" class="restart">Restart</button>
+         </div>
+        </div>
+        <div class="game_score">
+          <p id="score">Score: 0</p>
+          <div class="game_life">
+          <span class="heart"><i class="fa fa-heart"></i></span>
+          <span class="heart"><i class="fa fa-heart"></i></span>
+          <span class="heart"><i class="fa fa-heart"></i></span>
+        </div>
+        </div>
+        <div class="sound">
+          <audio id="clickSound" src="click.mp3"></audio>
+          <audio id="winSound" src="win.mp3"></audio>
+          <audio id="loseSound" src="lose.mp3"></audio>
+          <audio id="drawSound" src="draw.mp3"></audio>
+         </div>
+        <div class="game_messages">
+           <p id="messages"></p>
+         </div>
+        <div class="game_botton">
+          <button onclick="playGame('Rock')">  <img class="rock" src="images/rock.png" width="100" height="100" alt="rock"/></button>
+          <button onclick="playGame('Paper')"> <img  class="paper"src="images/paper.png" width="100" height="100" alt="paper" /></button>
+          <button onclick="playGame('Scissor')">  <img class="Scissor" src="images/scissor.png"width="100" height="100"  alt="scissor" /></button>
+        </div>
+         <div class="game_result">
+           <p id="result">Game restarted 🔄</p>
+         </div>
+         <div class="game_pick">
+           <p id="pick">Make your move 👊</p>
+         </div>
+      </div> 
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

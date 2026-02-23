@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-sizing;
+  font-family: Arial, sans-serif;
+}
+
+.game_container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/Play_station.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.3);
+
+  position: relative;
+  transition: background-image 0.4s ease;
+}
+
+
+.game_section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0,0,0,0.5); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+   /* background: linear-gradient(135deg, #1d2671, #c33764);  */
+}
+
+.game_content {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.popup {
+  width: 90%;
+  height: 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  visibility: hidden;
+  position: absolute;
+  top: 34%;
+  z-index: 99;
+  background-color: rgba(255,0,0,0.9); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+  animation: scaleIn 0.4s ease forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.restart_game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 10px;
+}
+
+.restart {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #e37754;
+}
+
+.restart:active {
+  transform: scale(1.1);
+}
+ 
+ 
+.game_score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.game_score  #score{
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+   background: linear-gradient(135deg, pink, #c33764);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.game_life {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.heart{
+  font-size: 25px;
+  color: red;
+  border-radius: 30px;
+}
+
+.heart.lost {
+  color: #555;
+  opacity: 0.7;
+}
+
+.game_messages {;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#messages {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Trebuchet MS;
+  text-align: center;
+}
+
+.game_botton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.game_botton button {
+  background-color: red;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  transition: transform .3s ease-in-out;
+}
+
+.game_botton button:active {
+  transform: scale(1.1);
+}
+
+
+.game_botton img {
+  border-radius: 50%;
+}
+
+
+.game_result , .game_pick{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#result , #pick {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Trebuchet MS;
+  text-align: center;
+}
+
